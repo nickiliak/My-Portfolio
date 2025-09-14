@@ -7,7 +7,7 @@ export default function About() {
       <div className="about-content-wrapper">
         <div className="about-left">
           <div className="about-header-tag">About Me</div>
-          <h1 className="about-title">Problem Solver</h1>
+          <h1 className="about-title">Love to build</h1>
           <p className="about-intro">
             I am a software engineer with a computer science background, currently pursuing an MSc in Human-Centered AI at DTU in Copenhagen, with a focus on Natural Language Processing and Machine Learning. Professionally, I have experience working on large-scale software engineering projects, aiming to solve pain points, streamline processes, and enhance projects through creativity.
           </p>

@@ -25,7 +25,7 @@ const projectsData = [
     title: "Zelda II",
     description: "Created a 2D game engine using C++ to recreate the famous game Zelda II. Employed design patterns to build the project and a test driven approach to catch bugs.",
     image: "images/zelda.jpg",
-    tags: ["Github", "Test-Driven Development", "Cmake", "Software Engineering", "Design Patterns"],
+    tags: ["Github", "Test-Driven Development", "Cmake", "Software Engineering", "Design Patterns", "C++"],
     githubUrl: "https://github.com/Thodorhs/Zelda_II"
   }
 ];
