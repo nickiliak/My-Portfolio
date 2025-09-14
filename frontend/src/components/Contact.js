@@ -2,72 +2,82 @@ import React from "react";
 import "./Contact.css";
 
 export default function Contact() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
-    <section id="contact" className="contact-section">
-      <div className="contact-header-content">
-        <span className="section-tag">Get in Touch</span>
-        <h2>Let's work together</h2>
-        <p className="contact-intro">
-          Whether you need help with data analysis, photography services, or just want
-          to chat about potential collaborations, I'd love to hear from you.
-        </p>
-      </div>
-      <div className="contact-container">
-        <div className="contact-form-container">
-          <form className="contact-form">
-            <div className="form-group-row">
-              <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input type="text" id="name" placeholder="Your name" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" placeholder="Your email" />
-              </div>
-            </div>
-            <div className="form-group">
-              <label htmlFor="subject">Subject</label>
-              <input type="text" id="subject" placeholder="What's this about?" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea id="message" rows="5" placeholder="Your message..."></textarea>
-            </div>
-            <button type="submit" className="send-message-button">
-              <i className="fa-solid fa-paper-plane"></i> Send Message
-            </button>
-          </form>
+    <>
+      <section id="contact" className="contact-section">
+        <div className="contact-header-content">
+          <span className="section-tag">Get in Touch</span>
+          <h2>Let's work together</h2>
+          <p className="contact-intro">
+            I would love to help you solve your software, machine learning or data analysis needs. Send me a message and let's talk!
+          </p>
         </div>
-        <div className="contact-info-card">
-          <h3>Contact Information</h3>
-          <ul>
-            <li>
-              <i className="fa-solid fa-map-marker-alt"></i>
-              <span>Copenhagen, Denmark</span>
-            </li>
-            <li>
-              <i className="fa-solid fa-envelope"></i>
-              <span>papantzikos12@gmail.com</span>
-            </li>
-            <li>
-              <i className="fa-solid fa-phone"></i>
-              <span>+45 91 82 87 19</span>
-            </li>
-          </ul>
-          <h4>Connect with me</h4>
-          <div className="social-links">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <i className="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <i className="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-              <i className="fa-brands fa-github"></i>
-            </a>
+        <div className="contact-container">
+          {/* We are removing the contact-form-container */}
+          <div className="contact-info-card">
+            <h3>Contact Information</h3>
+            <ul>
+              <li>
+                <i className="fa-solid fa-map-marker-alt"></i>
+                <span>Copenhagen, Denmark</span>
+              </li>
+              <li>
+                <i className="fa-solid fa-envelope"></i>
+                <span>nickiliak847@gmail.com</span>
+              </li>
+              <li>
+                <i className="fa-solid fa-phone"></i>
+                <span>+45 91482938</span>
+              </li>
+            </ul>
+            <h4>Connect with me</h4>
+            <div className="social-links">
+              <a href="https://linkedin.com/in/nikolaos-iliakis" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://instagram.com/your-instagram" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://github.com/nickiliak" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-github"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* NEW FOOTER SECTION */}
+      <footer className="footer-section">
+        <button onClick={scrollToTop} className="scroll-to-top">
+          <i className="fa-solid fa-chevron-up"></i>
+        </button>
+        <div className="footer-details">
+          <h3>Nikolaos Iliakis</h3>
+          <p className="footer-title">Software and ML Engineer</p>
+          <p className="footer-location">
+            <i className="fa-solid fa-map-marker-alt"></i> Copenhagen, Denmark
+          </p>
+          <div className="footer-contact-links">
+            <a href="mailto:nickiliak847@gmail.com"><i className="fa-solid fa-envelope"></i> Email</a>
+            <a href="https://github.com/nickiliak" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/nikolaosiliakis/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <span><i className="fa-solid fa-phone"></i> +45 91482938</span>
+          </div>
+        </div>
+        <p className="footer-copyright">
+          © {new Date().getFullYear()} Nikolaos Iliakis. All rights reserved.
+        </p>
+        <p className="footer-tags">
+          Machine Learning | Data Science | Software Engineering
+        </p>
+      </footer>
+    </>
   );
 }
