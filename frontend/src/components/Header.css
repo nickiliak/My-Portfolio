@@ -1,0 +1,55 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #2e2e4e; /* Updated to match the dark theme */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff; /* White color for the name */
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.header-logo a:hover {
+  color: #7c68e0; /* Hover color */
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #c0c0e0; /* Light gray for links */
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: #fff; /* White hover color */
+}
