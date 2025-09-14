@@ -1,50 +1,22 @@
 const express = require("express");
-const cors = require("cors");
+const path = require("path");
 const app = express();
-const PORT = 5000;
 
-app.use(cors());
+app.use(express.json());
 
-// Projects API
-app.get("/api/projects", (req, res) => {
-  res.json([
-    {
-      id: 1,
-      title: "AI Project",
-      description: "A cool ML model",
-      image: "https://via.placeholder.com/300",
-      details: "This project uses YOLO for object detection..."
-    },
-    {
-      id: 2,
-      title: "Web App",
-      description: "React + Node.js project",
-      image: "https://via.placeholder.com/300",
-      details: "Built with React frontend and Node.js backend..."
-    }
-  ]);
+// Your API routes
+app.get("/api/hello", (req, res) => {
+  res.json({ message: "Hello from backend!" });
 });
 
-// Experience API
-app.get("/api/experience", (req, res) => {
-  res.json([
-    {
-      id: 1,
-      role: "Intern",
-      company: "Tech Company",
-      period: "2024",
-      details: "Worked on backend APIs and automation."
-    },
-    {
-      id: 2,
-      role: "Student Assistant",
-      company: "University Lab",
-      period: "2025",
-      details: "Research on Human-Centered AI."
-    }
-  ]);
-});
+// Serve React frontend in production
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../frontend/build")));
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
+  });
+}
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
