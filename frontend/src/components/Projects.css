@@ -1,7 +1,7 @@
 .projects-section {
-  background-color: #1a1a2e;
+  background-color: #19192c;
   padding: 80px 20px;
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,32 +17,34 @@
   margin-bottom: 30px;
 }
 
+/* CORRECTED: The projects-title-group can be simplified */
 .projects-title-group {
-  display: flex;
-  flex-direction: column;
+    /* No special flex properties needed here */
+}
+
+/* This is the key change to align the tag and the title */
+.projects-section h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds space between the tag and the title */
+}
+
+/* Remove the icon rule from the h2 and apply it directly to the icon */
+.projects-section h2 i {
+  color: #7c68e0;
 }
 
 .section-tag {
-  background-color: #4a4a6e;
-  color: #c0c0e0;
-  padding: 5px 15px;
-  border-radius: 20px;
-  width: fit-content;
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-}
-
-.projects-section h2 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #fff;
-  display: flex;
-  align-items: center; /* This is the key change to fix vertical alignment */
-  gap: 15px;
-}
-
-.projects-section h2 i {
-  color: #7c68e0;
+    background-color: #4a4a6e;
+    color: #c0c0e0;
+    padding: 5px 15px;
+    border-radius: 20px;
+    width: fit-content;
+    font-size: 0.9rem;
+    margin-right: 15px; /* Adds space to the right of the tag */
 }
 
 .view-all-button {

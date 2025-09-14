@@ -34,10 +34,10 @@ export default function Projects() {
   return (
     <section id="projects" className="projects-section">
       <div className="projects-header">
+        {/* CORRECTED: The span is now inside the h2. */}
         <div className="projects-title-group">
-          <span className="section-tag">Projects</span>
           <h2>
-            <i className="fa-solid fa-folder-open"></i> Portfolio
+            <span className="section-tag">Projects</span> Portfolio
           </h2>
         </div>
         <a href="https://github.com/nickiliak" target="_blank" rel="noopener noreferrer" className="view-all-button">

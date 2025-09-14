@@ -1,7 +1,7 @@
 .about-section {
   background-color: #1a1a2e; /* Dark, but not black background */
   padding: 80px 20px;
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column; /* Stack the sections vertically */
   justify-content: center;
