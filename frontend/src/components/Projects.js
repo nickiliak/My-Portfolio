@@ -1,6 +1,35 @@
 import React from "react";
 import "./Projects.css";
 
+// This is a placeholder for your actual project data.
+// In a real application, you would fetch this from an API or a local JSON file.
+const projectsData = [
+  {
+    id: "customer-segmentation",
+    title: "Customer Segmentation: Regression & Classification",
+    description: "Machine learning and data analysis focused project, with the main goal of predicting Spending Score segmenting into high/low value customers. Used both classical and neural models.",
+    image: "images/customer-seg.png",
+    tags: ["Python", "Machine Learning", "Data analysis", "Github", "Neural Networks"],
+    githubUrl: "https://github.com/nickiliak/02450-Customer-Segmentation" 
+  },
+  {
+    id: "gym-progress-tracker",
+    title: "Gym Progress Tracker and Analytics",
+    description: "Full-stack Python project for logging and tracking weights and workouts. Built with Docker, Pytest, and GitHub Actions for CI/CD, featuring an automatic logger and SQL-based data management.",
+    image: "images/gym-progress.png",
+    tags: ["Py-test", "CI/CD", "Docker", "Python", "Fullstack", "SQL"],
+    githubUrl: "https://github.com/nickiliak/GymProgressTracker"
+  },
+  {
+    id: "Zelda-2",
+    title: "Zelda II",
+    description: "Created a 2D game engine using C++ to recreate the famous game Zelda II. Employed design patterns to build the project and a test driven approach to catch bugs.",
+    image: "images/zelda.jpg",
+    tags: ["Github", "Test-Driven Development", "Cmake", "Software Engineering", "Design Patterns"],
+    githubUrl: "https://github.com/Thodorhs/Zelda_II"
+  }
+];
+
 export default function Projects() {
   return (
     <section id="projects" className="projects-section">
@@ -8,88 +37,35 @@ export default function Projects() {
         <div className="projects-title-group">
           <span className="section-tag">Projects</span>
           <h2>
-            <i className="fa-solid fa-folder-open"></i> Data Science Portfolio
+            <i className="fa-solid fa-folder-open"></i> Portfolio
           </h2>
         </div>
-        <a href="#" className="view-all-button">
+        <a href="https://github.com/nickiliak" target="_blank" rel="noopener noreferrer" className="view-all-button">
           View All Projects <i className="fa-solid fa-arrow-up-right-from-square"></i>
         </a>
       </div>
 
       <p className="projects-description">
-        A selection of my data science and machine learning projects, showcasing my technical skills and analytical approaches.
+        A mix of my favourite projects on software engineering and machine learning/data science.
       </p>
 
       <div className="projects-grid">
-        {/* Project Card 1 */}
-        <div className="project-card">
-          <div className="card-image-container">
-            {/* Placeholder for project image */}
-            <img src="https://via.placeholder.com/400x250/2e2e4e/c0c0e0?text=Project+1+Image" alt="Project 1" />
-          </div>
-          <div className="card-content">
-            <h3 className="card-title">Plant Leaf Health Classification</h3>
-            <p className="card-description">
-              MLOps project with model training and deployment on Google Cloud (VertexAI, Cloud Run) using FastAPI, Streamlit, Docker, and GitHub Actions.
-            </p>
-            <div className="card-tags">
-              <span className="card-tag">Python</span>
-              <span className="card-tag">MLOps</span>
-              <span className="card-tag">Google Cloud</span>
-              <span className="card-tag">Docker</span>
-              <span className="card-tag">CI/CD</span>
+        {projectsData.map(project => (
+          <div className="project-card" key={project.id}>
+            <div className="card-image-container">
+              <img src={project.image} alt={project.title} />
             </div>
-            <a href="#" className="view-details-link">
-              View Details <i className="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        {/* Project Card 2 */}
-        <div className="project-card">
-          <div className="card-image-container">
-            {/* Placeholder for project image */}
-            <img src="https://via.placeholder.com/400x250/2e2e4e/c0c0e0?text=Project+2+Image" alt="Project 2" />
-          </div>
-          <div className="card-content">
-            <h3 className="card-title">Patient Mortality Classification</h3>
-            <p className="card-description">
-              Deep Learning project using EHRMamba model on Physionet2012 dataset, achieving 85% accuracy with PyTorch and HPC/GPU resources.
-            </p>
-            <div className="card-tags">
-              <span className="card-tag">Deep Learning</span>
-              <span className="card-tag">PyTorch</span>
-              <span className="card-tag">Healthcare</span>
-              <span className="card-tag">HPC</span>
+            <div className="card-content">
+              <h3 className="card-title">{project.title}</h3>
+              <p className="card-description">{project.description}</p>
+              <div className="card-tags">
+                {project.tags.map(tag => (
+                  <span className="card-tag" key={tag}>{tag}</span>
+                ))}
+              </div>
             </div>
-            <a href="#" className="view-details-link">
-              View Details <i className="fa-solid fa-arrow-right"></i>
-            </a>
           </div>
-        </div>
-
-        {/* Project Card 3 */}
-        <div className="project-card">
-          <div className="card-image-container">
-            {/* Placeholder for project image */}
-            <img src="https://via.placeholder.com/400x250/2e2e4e/c0c0e0?text=Project+3+Image" alt="Project 3" />
-          </div>
-          <div className="card-content">
-            <h3 className="card-title">Copenhagen Apartments Price Prediction</h3>
-            <p className="card-description">
-              Built a neural network model using PyTorch to predict rental prices with a Mean Absolute Error of 2,000 DKK.
-            </p>
-            <div className="card-tags">
-              <span className="card-tag">Neural Networks</span>
-              <span className="card-tag">PyTorch</span>
-              <span className="card-tag">Regression</span>
-              <span className="card-tag">Real Estate</span>
-            </div>
-            <a href="#" className="view-details-link">
-              View Details <i className="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

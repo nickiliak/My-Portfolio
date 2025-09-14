@@ -37,7 +37,7 @@
   font-weight: 700;
   color: #fff;
   display: flex;
-  align-items: center;
+  align-items: center; /* This is the key change to fix vertical alignment */
   gap: 15px;
 }
 

@@ -12,8 +12,8 @@ export default function About() {
             I am a software engineer with a computer science background, currently pursuing an MSc in Human-Centered AI at DTU in Copenhagen, with a focus on Natural Language Processing and Machine Learning. Professionally, I have experience working on large-scale software engineering projects, aiming to solve pain points, streamline processes, and enhance projects through creativity.
           </p>
           <p className="about-hobbies">
-            Outside of work, I enjoy staying active at the gym and occasionally practicing Jiu Jitsu to keep things exciting. 
-            Intellectually, I enjoy playing chess to the extent where if you see me on the metro, I’m probably on Chess.com, either that or reading about history.
+            Outside of work, I enjoy staying active at the gym and occasionally practicing Brazilian Jiu Jitsu to keep things exciting. 
+            Intellectually, I enjoy playing chess to the extent where if you see me on the metro, I'm probably on Chess.com, either that or reading about history.
           </p>
           <div className="skills-tags">
             <span className="skill-tag">Python</span>
