@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import useFadeInOnView from "./useFadeInOnView"; // Use your new hook
 import "./Projects.css";
 
 // This is a placeholder for your actual project data.
@@ -31,8 +32,11 @@ const projectsData = [
 ];
 
 export default function Projects() {
+  const sectionRef = useRef(null);
+  const isIntersecting = useFadeInOnView(sectionRef, { threshold: 0.1 });
+
   return (
-    <section id="projects" className="projects-section">
+    <section id="projects" className={`projects-section ${isIntersecting ? 'is-visible' : ''}`} ref={sectionRef}>
       <div className="projects-header">
         {/* CORRECTED: The span is now inside the h2. */}
         <div className="projects-title-group">

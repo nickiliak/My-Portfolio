@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import useFadeInOnView from "./useFadeInOnView"; // Use your new hook
 import "./Contact.css";
 
 export default function Contact() {
@@ -9,9 +10,12 @@ export default function Contact() {
     });
   };
 
+  const sectionRef = useRef(null);
+  const isIntersecting = useFadeInOnView(sectionRef, { threshold: 0.1 });
+
   return (
     <>
-      <section id="contact" className="contact-section">
+      <section id="contact" className={`contact-section ${isIntersecting ? 'is-visible' : ''}`} ref={sectionRef}>
         <div className="contact-header-content">
           <span className="section-tag">Get in Touch</span>
           <h2>Let's work together</h2>

@@ -6,6 +6,14 @@
   flex-direction: column;
   align-items: center;
   color: #e0e0e0;
+
+  /* Initial state for the fade-in effect */
+  opacity: 0;
+  transition: opacity 1.2s ease-out
+}
+
+.projects-section.is-visible {
+  opacity: 1;
 }
 
 .projects-header {
@@ -15,11 +23,6 @@
   max-width: 1200px;
   width: 100%;
   margin-bottom: 30px;
-}
-
-/* CORRECTED: The projects-title-group can be simplified */
-.projects-title-group {
-    /* No special flex properties needed here */
 }
 
 /* This is the key change to align the tag and the title */

@@ -6,6 +6,14 @@
   flex-direction: column;
   align-items: center;
   color: #e0e0e0;
+
+  /* Initial state for the fade-in effect */
+  opacity: 0;
+  transition: opacity 1.2s ease-out
+}
+
+.contact-section.is-visible {
+  opacity: 1;
 }
 
 .contact-header-content {

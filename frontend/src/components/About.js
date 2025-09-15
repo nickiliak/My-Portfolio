@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useRef } from "react";
+import useFadeInOnView from "./useFadeInOnView"; // Use your new hook
 import "./About.css";
 
 export default function About() {
+  const sectionRef = useRef(null);
+  const isIntersecting = useFadeInOnView(sectionRef, { threshold: 0.1 });
+
   return (
-    <section id="about" className="about-section">
+    <section id="about" className={`about-section ${isIntersecting ? 'is-visible' : ''}`} ref={sectionRef}>
       <div className="about-content-wrapper">
         <div className="about-left">
           <div className="about-header-tag">About Me</div>

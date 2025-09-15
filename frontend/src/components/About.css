@@ -1,11 +1,22 @@
+/* Add the initial state for the fade-in */
 .about-section {
-  background-color: #1a1a2e; /* Dark, but not black background */
+  /* Existing styles */
+  background-color: #1a1a2e;
   padding: 80px 20px;
   min-height: 70vh;
   display: flex;
-  flex-direction: column; /* Stack the sections vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+  /* Initial state for the fade-in effect */
+  opacity: 0;
+  transition: opacity 1.2s ease-out
+}
+
+/* Add the final state when it's in view */
+.about-section.is-visible {
+  opacity: 1;
 }
 
 .about-content-wrapper {
