@@ -1,5 +1,5 @@
 .experience-section {
-  background-color: #1a1a2e; /* Dark theme background */
+  background-color: #1a1a2e;
   padding: 80px 20px;
   min-height: 70vh;
   display: flex;
@@ -19,7 +19,9 @@
 
 .experience-title-group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Aligns items horizontally */
+  align-items: center; /* Vertically centers the items */
+  gap: 15px; /* Adds space between the tag and the title */
 }
 
 .section-tag {
@@ -29,7 +31,7 @@
   border-radius: 20px;
   width: fit-content;
   font-size: 0.9rem;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .experience-section h2 {
@@ -42,11 +44,11 @@
 }
 
 .experience-section h2 i {
-  color: #7c68e0; /* Purple accent for icon */
+  color: #7c68e0;
 }
 
 .download-cv-button {
-  background-color: #7c68e0; /* Purple accent for button */
+  background-color: #7c68e0;
   color: #fff;
   padding: 12px 25px;
   border-radius: 8px;
@@ -75,14 +77,15 @@
 
 .experience-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid for cards */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
-  max-width: 1200px;
+  max-width: 600px;
   width: 100%;
+  margin: 0 auto;
 }
 
 .experience-card {
-  background-color: #2e2e4e; /* Darker card background */
+  background-color: #2e2e4e;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -98,24 +101,24 @@
 
 .card-image-container {
   width: 100%;
-  height: 200px; /* Fixed height for images */
+  height: 200px;
   overflow: hidden;
 }
 
 .card-image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures images cover the area */
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
 .experience-card:hover .card-image-container img {
-  transform: scale(1.05); /* Slightly zoom on hover */
+  transform: scale(1.05);
 }
 
 .card-content {
   padding: 25px;
-  flex-grow: 1; /* Allows content to expand */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
@@ -132,7 +135,7 @@
   color: #b0b0d0;
   line-height: 1.5;
   margin-bottom: 20px;
-  flex-grow: 1; /* Allows description to take available space */
+  flex-grow: 1;
 }
 
 .card-tags {
@@ -159,7 +162,7 @@
   align-items: center;
   gap: 5px;
   transition: color 0.2s;
-  margin-top: auto; /* Pushes to the bottom */
+  margin-top: auto;
 }
 
 .view-details-link:hover {

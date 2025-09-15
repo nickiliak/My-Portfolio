@@ -5,10 +5,10 @@ export default function Experience() {
   return (
     <section id="experience" className="experience-section">
       <div className="experience-header">
+        {/* CORRECTED: The span is now inside the h2. */}
         <div className="experience-title-group">
-          <span className="section-tag">Experience</span>
           <h2>
-            <i className="fa-solid fa-code"></i> Professional Journey
+            <span className="section-tag">Experience</span> Professional Journey
           </h2>
         </div>
         <a href="/iliakis_cv.pdf" target="_blank" rel="noopener noreferrer" className="download-cv-button">
@@ -20,6 +20,7 @@ export default function Experience() {
         My professional work experience so far.
       </p>
 
+      {/* This is the container for all your experience cards. */}
       <div className="experience-grid">
         {/* Experience Card 1 */}
         <div className="experience-card">
