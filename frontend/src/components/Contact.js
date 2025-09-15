@@ -41,7 +41,7 @@ export default function Contact() {
                 <span>+45 91482938</span>
               </li>
             </ul>
-            <h4>Connect with me</h4>
+            <h4></h4>
             <div className="social-links">
               <a href="https://linkedin.com/in/nikolaos-iliakis" target="_blank" rel="noopener noreferrer">
                 <i className="fa-brands fa-linkedin"></i>
