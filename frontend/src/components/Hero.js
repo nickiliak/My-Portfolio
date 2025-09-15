@@ -46,7 +46,7 @@ export default function Hero() {
           I am a software engineer with a computer science background, currently pursuing an MSc in Human-Centered AI at DTU in Copenhagen, with a focus on Natural Language Processing and Machine Learning. Professionally, I have experience working on large-scale software engineering projects, aiming to solve pain points, streamline processes, and enhance projects through creativity.
         </p>
         <div className="hero-actions">
-          <a href="#projects" className="hero-button primary">
+          <a href="#about" className="hero-button primary">
             Explore My Work
           </a>
           <a href="#contact" className="hero-button secondary">
