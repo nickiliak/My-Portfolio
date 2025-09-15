@@ -1,7 +1,7 @@
 .contact-section {
   background-color: #19192c;
   padding: 80px 20px;
-  min-height: 70vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,7 +114,7 @@
 /* NEW FOOTER STYLES */
 .footer-section {
   background-color: #2e2e4e; /* Darker background for the footer */
-  padding: 50px 20px 30px; /* Adjusted padding */
+  padding: 10px 0px 0px; /* Adjusted padding */
   display: flex;
   flex-direction: column;
   align-items: center;

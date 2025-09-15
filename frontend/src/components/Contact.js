@@ -56,7 +56,7 @@ export default function Contact() {
       {/* NEW FOOTER SECTION */}
       <footer className="footer-section">
         <button onClick={scrollToTop} className="scroll-to-top">
-          <i className="fa-solid fa-chevron-up"></i>
+          <i className="fa-solid fa-chevron-up">↑</i>
         </button>
         <div className="footer-details">
           <h3>Nikolaos Iliakis</h3>
